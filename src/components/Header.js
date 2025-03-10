@@ -31,7 +31,7 @@ const Header = () => {
               alt="MocksphereLogo"
               style={{ width: "60px", height: "60px", marginRight: "20px" }}
             /> */}
-            <h1 className="text-white mb-0">Mocksphere</h1>
+            <h2 className="text-white mb-0">Mocksphere</h2>
           </div>
           
           {/* Center Links */}

@@ -9,7 +9,7 @@ const teamMembers = [
 
 const Teams = () => {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5 bg-light" id="team">
       <Container>
         <h2 className="text-center mb-5">Our Creative Team</h2>
         <Row className="justify-content-center">

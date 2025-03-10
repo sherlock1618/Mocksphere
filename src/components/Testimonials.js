@@ -19,6 +19,7 @@ const Testimonials = () => {
                   flexDirection: "column",
                   justifyContent: "center",
                 }}
+                className="card text-bg-light mb-3"
               >
                 <CardBody>
                   <CardText style={{ fontStyle: "italic", marginBottom: "15px" }}>

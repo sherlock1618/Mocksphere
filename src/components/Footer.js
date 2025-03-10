@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 
 const Footer = () => {
   return (
-    <footer className="text-white py-4">
+    <footer className="text-white py-4" id="About">
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-left">

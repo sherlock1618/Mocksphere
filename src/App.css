@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+body, html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -7,7 +7,7 @@ body {
 }
 
 section {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 /* Header Styles */
@@ -21,23 +21,27 @@ header {
   padding: 20px 0; /* Initial padding */
 }
 
-header.shrink {
-  padding: 10px 0; /* Reduced padding when shrunk */
-  background-color: #1a1a2e !important; /* Match navbar color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Navbar Styles */
 .navbar-top {
-  background-color: transparent !important;
   transition: all 0.3s ease;
-  height: 65px;
-  width: 100%; /* Ensure navbar takes full width */
+  height: 100px;
+  width: 100%; 
 }
 
 .navbar-top.shrink {
-  background: linear-gradient(purple, blue) !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  background: linear-gradient(135deg,rgb(35, 113, 240),rgb(161, 211, 235));
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card {
+  border-width: 2px !important;
+}
+
+.info-card {
+  border-width: 2px;
+  color: rgb(0, 0, 0);
+  background-color: #b6c9f0d8;
 }
 
 header h1 {
@@ -77,7 +81,6 @@ header.shrink .navbar .nav-link {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #6a11cb, #2575fc, #e0e7ff, white);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,9 +92,13 @@ header.shrink .navbar .nav-link {
   text-align: center;
 }
 
+.qna {
+  background: linear-gradient(rgb(255, 255, 255), rgb(89, 129, 216));
+}
+
 /* Footer Styles */
 footer {
-  background: linear-gradient(blue, purple);
+  background: rgb(89, 129, 216);
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -111,9 +118,6 @@ footer a:hover {
   color: #d94545;
 }
 
-.qna {
-  background: linear-gradient(white, blue);
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
