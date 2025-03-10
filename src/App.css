@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-size: cover;
+}
+
+section {
+  margin-top: 50px;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  color: white;
+  padding: 20px 0; /* Initial padding */
+}
+
+header.shrink {
+  padding: 10px 0; /* Reduced padding when shrunk */
+  background-color: #1a1a2e !important; /* Match navbar color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+.navbar-top {
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+  height: 65px;
+  width: 100%; /* Ensure navbar takes full width */
+}
+
+.navbar-top.shrink {
+  background: linear-gradient(purple, blue) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  transition: font-size 0.3s ease;
+}
+
+header.shrink h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.navbar .nav-link {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+header.shrink .navbar .nav-link {
+  color: #333;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1159f5 !important;
+}
+
+/* Hero Section Styles */
+.hero-background {
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc, #e0e7ff, white);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero-section {
+  padding: 150px 0;
+  text-align: center;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(blue, purple);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #f05454;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d94545;
+}
+
+.qna {
+  background: linear-gradient(white, blue);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .features, .team, .testimonials, .faqs {
+    padding: 40px 10px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .feature-card, .team-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
