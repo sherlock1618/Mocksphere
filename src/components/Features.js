@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, CardBody } from "reactstrap";
 const Features = () => {
   return (
     <section style={{ padding: "60px 0", textAlign: "center" }} id="Features">
-      <h2 className="display-4 mb-5">Amazing Features</h2>
+      <h2 className="display-4 mb-5">Discover Our Powerful Features</h2>
       <Container>
         <Row>
           {Array.from({ length: 6 }).map((_, index) => (
