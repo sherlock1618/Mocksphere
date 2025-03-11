@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, CardBody } from "reactstrap";
 
 const Features = () => {
   return (
-    <section style={{ padding: "60px 0", textAlign: "center" }} id="Features">
+    <section style={{ padding: "60px 0", textAlign: "center" }} id="features">
       <h2 className="display-4 mb-5">Discover Our Powerful Features</h2>
       <Container>
         <Row>

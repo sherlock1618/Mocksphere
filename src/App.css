@@ -29,9 +29,17 @@ header {
 }
 
 .navbar-top.shrink {
-  height: 75px;
+  height: 50px;
   background: linear-gradient(135deg,rgb(35, 113, 240),rgb(161, 211, 235));
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-top.shrink h2 {
+  font-size: large;
+}
+
+.navbar-top.shrink .nav-link {
+  font-size: small;
 }
 
 .card {
