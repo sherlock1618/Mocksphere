@@ -23,9 +23,9 @@ function App() {
         <Features />
         <Testimonials />
         <Plan />
-        <Teams />   
+        <Teams />
         <FAQ />
-        <Footer />             
+        <Footer />
       </div>
     </body>
   );
