@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, CardBody, CardText, CardTitle, Button } from "reactstrap";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "../css/Testimonials.css";
 
 const testimonials = [
@@ -36,8 +36,8 @@ const Testimonials = () => {
       <h2 className="display-4 mb-5">What People Say</h2>
       <Container>
         <Button
+          className="bt-slider btn-left"
           onClick={prev}
-          color="primary"
           style={{
             position: "absolute",
             left: "10px",
@@ -45,12 +45,10 @@ const Testimonials = () => {
             transform: "translateY(-50%)",
             zIndex: 1,
           }}
-        >
-          &#9664;
-        </Button>
+        />
         <Button
+          className="bt-slider btn-right"
           onClick={next}
-          color="primary"
           style={{
             position: "absolute",
             right: "10px",
@@ -58,49 +56,50 @@ const Testimonials = () => {
             transform: "translateY(-50%)",
             zIndex: 1,
           }}
-        >
-          &#9654;
-        </Button>
-        <motion.div
-          key={currentIndex}
-          initial={{ x: direction * 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-        >
-          <Row style={{ justifyContent: "center" }}>
-            {visibleTestimonials.map((testimonial, index) => (
-              <Col md="4" className="mb-4" key={testimonial.name}>
-                <Card
-                  style={{
-                    border: "2px solid #ccc",
-                    borderRadius: "8px",
-                    padding: "20px",
-                    height: "300px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                  className="card text-bg-light mb-3"
-                >
-                  <CardBody>
-                    <CardText style={{ fontStyle: "italic", marginBottom: "15px" }}>
-                      "{testimonial.text}"
-                    </CardText>
-                    <div style={{ marginBottom: "15px" }}>
-                      <img
-                        src={`https://i.pravatar.cc/100?img=${index + 1}`}
-                        alt="avatar"
-                        style={{ borderRadius: "50%", width: "80px", height: "80px" }}
-                      />
-                    </div>
-                    <CardTitle tag="h5">{testimonial.name}</CardTitle>
-                    <p className="text-muted">{testimonial.position}</p>
-                  </CardBody>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </motion.div>
+        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ x: direction * 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -direction * 100, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            <Row style={{ justifyContent: "center" }}>
+              {visibleTestimonials.map((testimonial, index) => (
+                <Col md="4" className="mb-4" key={testimonial.name}>
+                  <Card
+                    style={{
+                      border: "2px solid #ccc",
+                      borderRadius: "8px",
+                      padding: "20px",
+                      height: "300px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                    }}
+                    className="card text-bg-light mb-3"
+                  >
+                    <CardBody>
+                      <CardText style={{ fontStyle: "italic", marginBottom: "15px" }}>
+                        "{testimonial.text}"
+                      </CardText>
+                      <div style={{ marginBottom: "15px" }}>
+                        <img
+                          // src={`https://i.pravatar.cc/100?img=${index + 1}`}
+                          alt={`${index}`}
+                          style={{ borderRadius: "50%", width: "80px", height: "80px" }}
+                        />
+                      </div>
+                      <CardTitle tag="h5">{testimonial.name}</CardTitle>
+                      <p className="text-muted">{testimonial.position}</p>
+                    </CardBody>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </motion.div>
+        </AnimatePresence>
       </Container>
     </section>
   );

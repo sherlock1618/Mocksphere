@@ -1,30 +1,46 @@
-.button-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  
-  .left-button {
+
+
+.left-button {
     left: 20px;
-  }
-  
-  .right-button {
+}
+
+.right-button {
     right: 20px;
-  }
-  
-  button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
+}
+
+
+
+
+.card {
+    width: 95%;
+    left: 9px;
+}
+
+.bt-slider { 
+    border: none !important;
+    height: 100%;
+    width: 100px;
+    margin: 0 -10px 0 -10px;
+    background: transparent !important;
+}
+
+.btn:hover {
+    opacity: 50%;
+}
+
+.btn-right {
+    mix-blend-mode:normal;
+    background-image: url("/public/background/right.jpg") !important;
+    background-size: 50px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.btn-left {
+    mix-blend-mode:normal;
+    background-image: url("/public/background/left.jpg") !important;
+    background-size: 50px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+

@@ -1,13 +1,8 @@
 /* General Styles */
 body, html {
-  margin: 0;
   font-family: "Merriweather" sans-serif;
   line-height: 1.6;
   background-size: cover;
-}
-
-section {
-  margin-top: 25px;
 }
 
 /* Header Styles */
